@@ -22,7 +22,9 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-client = genai.Client(api_key=st.secrets["AQ.Ab8RN6L6G3LsdhafOmSIb5ZFrq33ziuMCbucn7QR76gADm3zgQ"])
+client = genai.Client(
+    api_key=st.secrets["GEMINI_API_KEY"]
+)
 
 chat = client.chats.create(
     model="gemini-3-flash-preview"
